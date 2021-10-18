@@ -23,9 +23,7 @@ public class UserAccountServiceImpl extends BaseServiceImpl<UserAccount, Long, U
     @Override
     public UserAccount register(UserAccount userAccount) {
 
-        UserAccount result = super.save(userAccount);
-        SecurityContext.login(result);
-        return result;
+       return super.save(userAccount);
     }
 
     @Override
