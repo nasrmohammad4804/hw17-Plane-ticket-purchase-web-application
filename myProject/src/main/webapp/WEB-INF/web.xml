@@ -1,0 +1,137 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+
+  <filter>
+    <filter-name>companyInitialize</filter-name>
+    <filter-class>service.servlet.filter.AddDefaultCompany</filter-class>
+  </filter>
+
+
+
+
+  <filter-mapping>
+    <filter-name>companyInitialize</filter-name>
+   <servlet-name>loginPan</servlet-name>
+  </filter-mapping>
+
+  <servlet>
+    <servlet-name>userRegister</servlet-name>
+    <servlet-class>service.servlet.useraccountserviceservlet.UserRegister</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>companyRegister</servlet-name>
+    <servlet-class>service.servlet.companyaccountserviceservlet.CompanyRegister</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>loginPan</servlet-name>
+    <servlet-class>service.servlet.accountserviceservlet.Login</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>addTicket</servlet-name>
+    <servlet-class>service.servlet.companyaccountserviceservlet.AddTicket</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>checkPassenger</servlet-name>
+    <servlet-class>service.servlet.useraccountserviceservlet.CheckPassengerIsValid</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>myPayment</servlet-name>
+    <servlet-class>service.servlet.useraccountserviceservlet.PaymentConfirmation</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>increaseInventory</servlet-name>
+    <servlet-class>service.servlet.useraccountserviceservlet.IncreaseInventory</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>showWallet</servlet-name>
+    <servlet-class>service.servlet.useraccountserviceservlet.ShowWallet</servlet-class>
+  </servlet>
+  
+ 
+  <servlet>
+    <servlet-name>notFound</servlet-name>
+    <servlet-class>service.servlet.useraccountserviceservlet.NotFoundPage</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>addDiscount</servlet-name>
+    <servlet-class>service.servlet.useraccountserviceservlet.Admin.AddDiscount</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>changeDiscount</servlet-name>
+    <servlet-class>service.servlet.useraccountserviceservlet.Admin.ChangeDiscount</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>changeDiscount</servlet-name>
+    <url-pattern>/changeDiscount</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>addDiscount</servlet-name>
+    <url-pattern>/addDiscount</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>notFound</servlet-name>
+    <url-pattern>/notFound</url-pattern>
+  </servlet-mapping>
+  
+
+  <servlet-mapping>
+    <servlet-name>showWallet</servlet-name>
+    <url-pattern>/wallet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>increaseInventory</servlet-name>
+    <url-pattern>/charge</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>myPayment</servlet-name>
+    <url-pattern>/payment</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>checkPassenger</servlet-name>
+    <url-pattern>/checkPassenger</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>addTicket</servlet-name>
+    <url-pattern>/addTicket</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>companyRegister</servlet-name>
+    <url-pattern>/companyRegister</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>loginPan</servlet-name>
+    <url-pattern>/loginPanel</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>userRegister</servlet-name>
+    <url-pattern>/userRegister</url-pattern>
+  </servlet-mapping>
+
+  <welcome-file-list>
+    <welcome-file>/html/firstPage.html</welcome-file>
+
+  </welcome-file-list>
+</web-app>
