@@ -252,7 +252,7 @@
     </div>
 
     <form action="/jsp/payment.jsp" method="post">
-        <input type="hidden" name="cost" value="<%=totalPrice%>"> 
+        <input type="hidden" name="cost" value="<%=totalPrice%>">
         <input type="hidden" name="passengerNumber" value="<%=userAccounts.size()%>">
         <input type="hidden" name="TransactionType" value="decrease">
         <input type="hidden" name="ticketCompanyAccount" value="<%=ticketCompanyAccount.get().getId()%>">
